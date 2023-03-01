@@ -1,0 +1,12 @@
+version: '3'
+services:
+  blog:
+    container_name: blog
+    build: ./blog
+    working_dir: /blog
+    command: dev
+    ports:
+      - 3002:8080
+    restart: on-failure
+    volumes:
+      - ./blog:/blog
